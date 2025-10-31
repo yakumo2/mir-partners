@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
@@ -20,6 +21,16 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.hero}>
+        <div className={styles.logoWrapper}>
+          <Image
+            src="/mir-logo.png"
+            alt="传奇合伙人 logo"
+            width={420}
+            height={180}
+            className={styles.logoImage}
+            priority
+          />
+        </div>
         <h1 className={styles.title}>传奇合伙人计划</h1>
         <p className={styles.subtitle}>
           深入了解米拉成长体系，并演练合伙人晋级与收益分配的完整流程。
