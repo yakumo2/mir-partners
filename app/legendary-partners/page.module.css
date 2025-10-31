@@ -1,0 +1,434 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 5vw, 6rem);
+  color: #f8fafc;
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.8) 0%, #020617 60%, #000 100%);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 720px;
+}
+
+.tagline {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.hero p {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 960px;
+}
+
+.section h2,
+.section h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.section p {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(226, 232, 240, 0.88);
+}
+
+.valueList {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.valueList li {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  line-height: 1.6;
+}
+
+.notice {
+  padding: 1rem 1.25rem;
+  border-left: 4px solid rgba(96, 165, 250, 0.8);
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 12px;
+  line-height: 1.6;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.notice strong {
+  color: #93c5fd;
+}
+
+.sourceSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.sourceList {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sourceList li {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  color: rgba(191, 219, 254, 0.95);
+  line-height: 1.6;
+}
+
+.sourceTableWrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  background: rgba(30, 41, 59, 0.6);
+}
+
+.sourceTable {
+  width: max(100%, 980px);
+  border-collapse: collapse;
+  table-layout: auto;
+  font-size: 0.925rem;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.sourceTable th,
+.sourceTable td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(96, 165, 250, 0.15);
+  text-align: left;
+  vertical-align: top;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.sourceTable thead th {
+  background: rgba(30, 64, 175, 0.25);
+  color: rgba(191, 219, 254, 0.95);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.sourceTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.assessment {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.assessmentBlock {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.assessmentBlock h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #bae6fd;
+}
+
+.assessmentBlock p {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.exampleCard {
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: rgba(191, 219, 254, 0.95);
+  line-height: 1.6;
+}
+
+.exampleCard strong {
+  color: #7dd3fc;
+  margin-right: 0.5rem;
+}
+
+.settlementSection {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1.75rem;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.settlementOverview {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.settlementCard {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  color: rgba(191, 219, 254, 0.95);
+}
+
+.settlementCard strong {
+  font-size: 1rem;
+  color: #bfdbfe;
+}
+
+.settlementCard span {
+  line-height: 1.6;
+}
+
+.exampleGroup {
+  display: grid;
+  gap: 1rem;
+}
+
+.channelTableWrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  background: rgba(30, 41, 59, 0.6);
+}
+
+.channelTable {
+  width: max(100%, 720px);
+  border-collapse: collapse;
+  table-layout: auto;
+  font-size: 0.9rem;
+  color: rgba(226, 232, 240, 0.92);
+}
+
+.channelTable th,
+.channelTable td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.channelTable th {
+  background: rgba(37, 99, 235, 0.25);
+  color: rgba(191, 219, 254, 0.95);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.channelTable td:nth-child(1) {
+  white-space: normal;
+}
+
+.channelTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.checklist {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.checklist h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #bfdbfe;
+}
+
+.checklist ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.5rem;
+  color: rgba(191, 219, 254, 0.92);
+  line-height: 1.6;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.65);
+  box-shadow: 0 24px 48px rgba(2, 6, 23, 0.35);
+}
+
+.tierTable {
+  width: max(100%, 960px);
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.tierTable th,
+.tierTable td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  text-align: left;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.tierTable thead th {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(148, 163, 184, 0.9);
+  background: rgba(15, 23, 42, 0.85);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+.tierTable thead th:first-child {
+  left: 0;
+  z-index: 3;
+}
+
+.tierTable tbody td:first-child {
+  position: sticky;
+  left: 0;
+  background: rgba(15, 23, 42, 0.9);
+  z-index: 2;
+}
+
+.tierTable th:first-child,
+.tierTable td:first-child {
+  min-width: 180px;
+}
+
+.tierName {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.tierName span {
+  font-weight: 600;
+  color: #f8fafc;
+  white-space: nowrap;
+}
+
+.tierNote {
+  font-size: 0.8rem;
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.badgeYes,
+.badgeNo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.badgeYes {
+  background: rgba(34, 197, 94, 0.16);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.badgeNo {
+  background: rgba(148, 163, 184, 0.1);
+  color: rgba(148, 163, 184, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.footnote {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(148, 163, 184, 0.85);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 2rem 1.5rem 3rem;
+    gap: 2.5rem;
+  }
+
+  .sourceTableWrapper {
+    margin: 0 -1.5rem;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+
+  .settlementSection {
+    padding: 1.5rem;
+    margin: 0 -1.5rem;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+
+  .channelTableWrapper {
+    margin: 0 -1.5rem;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+
+  .tableWrapper {
+    margin: 0 -1.5rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .valueList li {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,257 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 5vw, 6rem);
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.85) 0%, #020617 60%, #000 100%);
+  color: #f8fafc;
+}
+
+.hero {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 760px;
+}
+
+.tagline {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.hero p {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(226, 232, 240, 0.88);
+}
+
+.section {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 1080px;
+}
+
+.section h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.assumptionList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.assumptionList li {
+  padding: 0.85rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  background: rgba(59, 130, 246, 0.1);
+  line-height: 1.6;
+  color: rgba(191, 219, 254, 0.95);
+}
+
+.timeline {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.timelineCard {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.68);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  box-shadow: 0 24px 48px rgba(2, 6, 23, 0.35);
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timelineHeader h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.tierBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(45, 212, 191, 0.16);
+  border: 1px solid rgba(45, 212, 191, 0.4);
+  color: #5eead4;
+}
+
+.metricList {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.metricList div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.metricList dt {
+  font-size: 0.9rem;
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.metricList dd {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.metricNote {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgba(148, 163, 184, 0.85);
+}
+
+.calculationBlock {
+  display: grid;
+  gap: 1rem;
+  padding: 1.1rem;
+  border-radius: 14px;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+}
+
+.calculationBlock h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(191, 219, 254, 0.95);
+}
+
+.calcGroup {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.calcTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.calcGroup ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.3rem;
+  color: rgba(191, 219, 254, 0.9);
+  line-height: 1.55;
+}
+
+.summaryCard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+}
+
+.summaryLabel {
+  display: block;
+  font-size: 0.9rem;
+  color: rgba(148, 163, 184, 0.9);
+  margin-bottom: 0.5rem;
+}
+
+.summaryCard strong {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.detailTable {
+  width: max(100%, 880px);
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.detailTable th,
+.detailTable td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(96, 165, 250, 0.15);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.detailTable th {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(191, 219, 254, 0.92);
+  background: rgba(30, 64, 175, 0.3);
+}
+
+.detailTable td:first-child {
+  font-weight: 500;
+  color: #f8fafc;
+}
+
+.footnote {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(148, 163, 184, 0.85);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 2rem 1.5rem 3rem;
+    gap: 2.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .tableWrapper {
+    margin: 0 -1.5rem;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+}
