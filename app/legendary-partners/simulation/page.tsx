@@ -647,28 +647,40 @@ export default function SimulationPage() {
               <div>
                 <span className={styles.summaryLabel}>三个月累计 COIN 返利</span>
                 <strong
-                  ref={(el) => (highlightRefs.current.summaryCoin = el)}
+                  ref={(el) => {
+                    highlightRefs.current.summaryCoin = el;
+                  }}
                 >
                   {formatNumber(totals.coin)} 枚
                 </strong>
               </div>
               <div>
                 <span className={styles.summaryLabel}>三个月累计现金分成</span>
-                <strong ref={(el) => (highlightRefs.current.summaryCash = el)}>
+                <strong
+                  ref={(el) => {
+                    highlightRefs.current.summaryCash = el;
+                  }}
+                >
                   ¥{formatNumber(totals.cash)}
                 </strong>
               </div>
               <div>
                 <span className={styles.summaryLabel}>下线三个月累计 COIN 返利</span>
                 <strong
-                  ref={(el) => (highlightRefs.current.summaryDownCoin = el)}
+                  ref={(el) => {
+                    highlightRefs.current.summaryDownCoin = el;
+                  }}
                 >
                   {formatNumber(downlineTotals.coin)} 枚
                 </strong>
               </div>
               <div>
                 <span className={styles.summaryLabel}>下线三个月累计现金分成</span>
-                <strong ref={(el) => (highlightRefs.current.summaryDownCash = el)}>
+                <strong
+                  ref={(el) => {
+                    highlightRefs.current.summaryDownCash = el;
+                  }}
+                >
                   ¥{formatNumber(downlineTotals.cash)}
                 </strong>
               </div>
@@ -719,22 +731,28 @@ export default function SimulationPage() {
                         <td>{formatNumber(result.cumulativeMira)}</td>
                         <td>{result.tier.name}</td>
                         <td>
-                          <span
-                            ref={(el) => (highlightRefs.current[`self-${index}-coin`] = el)}
-                          >
+                        <span
+                          ref={(el) => {
+                            highlightRefs.current[`self-${index}-coin`] = el;
+                          }}
+                        >
                             {result.coinReward > 0 ? `${formatNumber(result.coinReward)} 枚` : "—"}
                           </span>
                         </td>
                         <td>
                           <span
-                            ref={(el) => (highlightRefs.current[`self-${index}-cash`] = el)}
+                            ref={(el) => {
+                              highlightRefs.current[`self-${index}-cash`] = el;
+                            }}
                           >
                             {result.cashReward > 0 ? `¥${formatNumber(result.cashReward)}` : "—"}
                           </span>
                         </td>
                         <td>
                           <span
-                            ref={(el) => (highlightRefs.current[`self-${index}-ratio`] = el)}
+                            ref={(el) => {
+                              highlightRefs.current[`self-${index}-ratio`] = el;
+                            }}
                           >
                             {result.month.selfRecharge > 0
                               ? `${formatNumber(selfReturn * 100)}%`
@@ -744,7 +762,9 @@ export default function SimulationPage() {
                         <td>{downline?.tier.name ?? "—"}</td>
                         <td>
                           <span
-                            ref={(el) => (highlightRefs.current[`down-${index}-coin`] = el)}
+                            ref={(el) => {
+                              highlightRefs.current[`down-${index}-coin`] = el;
+                            }}
                           >
                             {downline && downline.coinReward > 0
                               ? `${formatNumber(downline.coinReward)} 枚`
@@ -753,7 +773,9 @@ export default function SimulationPage() {
                         </td>
                         <td>
                           <span
-                            ref={(el) => (highlightRefs.current[`down-${index}-cash`] = el)}
+                            ref={(el) => {
+                              highlightRefs.current[`down-${index}-cash`] = el;
+                            }}
                           >
                             {downline && downline.cashReward > 0
                               ? `¥${formatNumber(downline.cashReward)}`
@@ -762,7 +784,9 @@ export default function SimulationPage() {
                         </td>
                         <td>
                           <span
-                            ref={(el) => (highlightRefs.current[`down-${index}-ratio`] = el)}
+                            ref={(el) => {
+                              highlightRefs.current[`down-${index}-ratio`] = el;
+                            }}
                           >
                             {downline && downline.month.selfRecharge > 0
                               ? `${formatNumber(downlineReturn * 100)}%`
@@ -771,7 +795,9 @@ export default function SimulationPage() {
                         </td>
                         <td>
                           <span
-                            ref={(el) => (highlightRefs.current[`combined-${index}-ratio`] = el)}
+                            ref={(el) => {
+                              highlightRefs.current[`combined-${index}-ratio`] = el;
+                            }}
                           >
                             {result.month.selfRecharge + result.month.downlineRecharge > 0
                               ? `${formatNumber(combinedReturn * 100)}%`

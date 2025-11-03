@@ -1,3 +1,7 @@
 "use client";
 
-export { default } from "../simulation/page";
+import SimulationPage from "../simulation/page";
+
+export default function SimulationCustomPage() {
+  return <SimulationPage />;
+}
