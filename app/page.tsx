@@ -14,6 +14,11 @@ const sections = [
     title: "三个月成长模拟",
     description: "了解示例合伙人在三个月内的积分晋升、返利计算过程。",
     href: "/legendary-partners/simulation"
+  },
+  {
+    title: "三个月成长模拟 - 自定义参数",
+    description: "复制官方场景，自由调整多组参数进行收益对比试算。",
+    href: "/legendary-partners/simulation-custom"
   }
 ];
 

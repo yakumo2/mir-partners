@@ -40,13 +40,152 @@
 .section {
   display: grid;
   gap: 1.25rem;
-  max-width: 1080px;
 }
 
 .section h2 {
   margin: 0;
   font-size: 1.75rem;
   font-weight: 600;
+}
+
+.sectionLead {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(191, 219, 254, 0.88);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 340px) 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.sidebar {
+  display: grid;
+  gap: 2rem;
+  align-self: start;
+  position: sticky;
+  top: 6rem;
+  height: fit-content;
+}
+
+.sideSection {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  box-shadow: 0 18px 36px rgba(2, 6, 23, 0.3);
+}
+
+.sideSection h2 {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 600;
+}
+
+.mainContent {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.inputGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.inputCard {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.68);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  box-shadow: 0 16px 32px rgba(2, 6, 23, 0.35);
+}
+
+.inputCard h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(191, 219, 254, 0.95);
+}
+
+.inputField {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.inputField label {
+  font-size: 0.85rem;
+  color: rgba(148, 163, 184, 0.88);
+}
+
+.inputControl {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 12px;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.inputControl span {
+  color: rgba(148, 163, 184, 0.9);
+  font-size: 0.9rem;
+}
+
+.inputControl input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f8fafc;
+  font-size: 1rem;
+  font-family: inherit;
+  -moz-appearance: textfield;
+  text-align: right;
+}
+
+.inputControl input::-webkit-outer-spin-button,
+.inputControl input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.distributionBox {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.rateList {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.rateItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rateLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.rateLabel small {
+  font-size: 0.75rem;
+  color: rgba(148, 163, 184, 0.85);
+}
+
+.rateItem .inputControl {
+  width: 140px;
 }
 
 .assumptionList {
@@ -88,6 +227,12 @@
   align-items: center;
 }
 
+.badgeRow {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
 .timelineHeader h3 {
   margin: 0;
   font-size: 1.25rem;
@@ -104,6 +249,29 @@
   background: rgba(45, 212, 191, 0.16);
   border: 1px solid rgba(45, 212, 191, 0.4);
   color: #5eead4;
+}
+
+.changeBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.changeBadge.up {
+  background: rgba(56, 189, 248, 0.18);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+}
+
+.changeBadge.down {
+  background: rgba(248, 113, 113, 0.18);
+  border: 1px solid rgba(248, 113, 113, 0.4);
+  color: #f87171;
 }
 
 .metricList {
@@ -194,6 +362,22 @@
   font-weight: 700;
 }
 
+.highlight {
+  animation: highlightFade 1.2s ease-in-out;
+}
+
+@keyframes highlightFade {
+  0% {
+    background: rgba(250, 204, 21, 0.6);
+  }
+  40% {
+    background: rgba(250, 204, 21, 0.2);
+  }
+  100% {
+    background: transparent;
+  }
+}
+
 .tableWrapper {
   overflow-x: auto;
   overflow-y: hidden;
@@ -203,7 +387,7 @@
 }
 
 .detailTable {
-  width: max(100%, 880px);
+  width: max(100%, 1120px);
   border-collapse: collapse;
   table-layout: auto;
 }
@@ -236,8 +420,16 @@
 
 @media (max-width: 768px) {
   .wrapper {
-    padding: 2rem 1.5rem 3rem;
+    padding: 2rem 1.2rem 3rem;
     gap: 2.5rem;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
   }
 
   .section h2 {
