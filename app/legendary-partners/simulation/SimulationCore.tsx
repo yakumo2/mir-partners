@@ -778,6 +778,8 @@ export function SimulationCore(props: SimulationProps = {}) {
             </div>
           </section>
 
+          {renderSpecialControls()}
+
           <section className={styles.sideSection}>
             <h2>关键假设</h2>
             <ul className={styles.assumptionList}>
@@ -795,8 +797,6 @@ export function SimulationCore(props: SimulationProps = {}) {
               ) : null}
             </ul>
           </section>
-
-          {renderSpecialControls()}
 
           <section className={styles.sideSection}>
             <h2>分成比例设置</h2>

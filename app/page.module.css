@@ -52,10 +52,15 @@
   justify-content: center;
 }
 
+.linkWrapper {
+  flex: 1 1 320px;
+  max-width: 360px;
+  display: flex;
+}
+
 .link {
   display: grid;
   gap: 0.35rem;
-  min-width: 240px;
   padding: 1.25rem 1.5rem;
   border-radius: 20px;
   background: rgba(15, 23, 42, 0.75);
@@ -64,6 +69,7 @@
   transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
   border: 1px solid rgba(148, 163, 184, 0.3);
   text-align: left;
+  flex: 1;
 }
 
 .link:hover {

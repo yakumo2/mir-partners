@@ -6,19 +6,14 @@ import styles from "./page.module.css";
 
 const sections = [
   {
+    title: "三个月成长模拟 - 自定义参数",
+    description: "复制官方场景，自由调整多组参数进行收益对比试算。",
+    href: "/legendary-partners/simulation-custom-full"
+  },
+  {
     title: "传奇合伙人计划",
     description: "查看计划定位、米拉体系、星级权益与结算规则的完整说明。",
     href: "/legendary-partners"
-  },
-  {
-    title: "三个月成长模拟",
-    description: "了解示例合伙人在三个月内的积分晋升、返利计算过程。",
-    href: "/legendary-partners/simulation"
-  },
-  {
-    title: "三个月成长模拟 - 自定义参数",
-    description: "复制官方场景，自由调整多组参数进行收益对比试算。",
-    href: "/legendary-partners/simulation-custom"
   }
 ];
 
@@ -42,10 +37,12 @@ export default function Home() {
         </p>
         <div className={styles.links}>
           {sections.map((section) => (
-            <Link key={section.href} href={section.href} className={styles.link}>
-              <span className={styles.linkTitle}>{section.title}</span>
-              <span className={styles.linkDescription}>{section.description}</span>
-            </Link>
+            <div key={section.href} className={styles.linkWrapper}>
+              <Link href={section.href} className={styles.link}>
+                <span className={styles.linkTitle}>{section.title}</span>
+                <span className={styles.linkDescription}>{section.description}</span>
+              </Link>
+            </div>
           ))}
         </div>
       </section>
