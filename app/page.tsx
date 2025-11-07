@@ -6,14 +6,19 @@ import styles from "./page.module.css";
 
 const sections = [
   {
+    title: "传奇合伙人计划（模拟网站原型）",
+    description: "登录后查看个人入口、加入方式与成长旅程示例。",
+    href: "/legendary-partners"
+  },
+  {
+    title: "传奇合伙人计划 · 体系说明",
+    description: "查看计划定位、米拉体系、星级权益与结算规则的完整说明。",
+    href: "/legendary-partners/ecosystem"
+  },
+  {
     title: "三个月成长模拟 - 自定义参数",
     description: "复制官方场景，自由调整多组参数进行收益对比试算。",
     href: "/legendary-partners/simulation-custom-full"
-  },
-  {
-    title: "传奇合伙人计划",
-    description: "查看计划定位、米拉体系、星级权益与结算规则的完整说明。",
-    href: "/legendary-partners"
   }
 ];
 

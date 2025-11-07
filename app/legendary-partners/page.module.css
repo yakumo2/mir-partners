@@ -1,454 +1,328 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 3.5rem;
-  padding: clamp(2.5rem, 6vw, 5rem) clamp(2.5rem, 9vw, 11rem);
+  min-height: 100vh;
+  padding: clamp(2rem, 5vw, 4rem);
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95) 0%, #020617 65%, #000 100%);
   color: #f8fafc;
-  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9) 0%, #020617 70%, #000 100%);
+  display: grid;
+  gap: 2.5rem;
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  gap: 1.35rem;
-  max-width: 1100px;
-  width: 100%;
-  align-self: center;
+  display: grid;
+  gap: 1rem;
+  max-width: 720px;
 }
 
-.tagline {
+.eyebrow {
   display: inline-flex;
-  align-self: flex-start;
-  padding: 0.25rem 0.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.9rem;
   border-radius: 999px;
-  background: rgba(59, 130, 246, 0.15);
-  color: #60a5fa;
-  font-size: 0.875rem;
-  letter-spacing: 0.08em;
+  background: rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  font-size: 0.85rem;
+  color: #bae6fd;
+  width: fit-content;
 }
 
 .hero h1 {
-  font-size: clamp(2.25rem, 4vw, 3rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
   margin: 0;
+  font-size: clamp(2.5rem, 6vw, 3.4rem);
 }
 
 .hero p {
   margin: 0;
+  color: rgba(226, 232, 240, 0.8);
+  font-size: 1.05rem;
   line-height: 1.7;
-  color: rgba(226, 232, 240, 0.9);
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
-  max-width: 1280px;
-  width: 100%;
-  align-self: center;
-}
-
-.section h2,
-.section h3 {
-  margin: 0;
-  font-weight: 600;
-}
-
-.section p {
-  margin: 0;
-  line-height: 1.7;
-  color: rgba(226, 232, 240, 0.88);
-}
-
-.valueList {
-  display: grid;
-  gap: 0.75rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.valueList li {
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  background: rgba(148, 163, 184, 0.08);
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  line-height: 1.6;
-}
-
-.notice {
-  padding: 1rem 1.25rem;
-  border-left: 4px solid rgba(96, 165, 250, 0.8);
-  background: rgba(15, 23, 42, 0.6);
-  border-radius: 12px;
-  line-height: 1.6;
-  color: rgba(226, 232, 240, 0.9);
-}
-
-.notice strong {
-  color: #93c5fd;
-}
-
-.sourceSection {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.sourceList {
-  display: grid;
-  gap: 0.75rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.sourceList li {
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  background: rgba(59, 130, 246, 0.12);
-  border: 1px solid rgba(59, 130, 246, 0.35);
-  color: rgba(191, 219, 254, 0.95);
-  line-height: 1.6;
-}
-
-.sourceTableWrapper {
-  overflow-x: auto;
-  overflow-y: hidden;
-  border-radius: 12px;
-  border: 1px solid rgba(96, 165, 250, 0.25);
-  background: rgba(30, 41, 59, 0.6);
-  width: 100%;
-  align-self: center;
-}
-
-.sourceTable {
-  width: max(100%, 980px);
-  border-collapse: collapse;
-  table-layout: auto;
-  font-size: 0.925rem;
-  color: rgba(226, 232, 240, 0.9);
-}
-
-.sourceTable th,
-.sourceTable td {
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid rgba(96, 165, 250, 0.15);
-  text-align: left;
-  vertical-align: top;
-  word-break: break-word;
-  white-space: normal;
-}
-
-.sourceTable thead th {
-  background: rgba(30, 64, 175, 0.25);
-  color: rgba(191, 219, 254, 0.95);
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.sourceTable tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.assessment {
+.grid {
   display: grid;
   gap: 1.5rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-.assessmentBlock {
-  background: rgba(15, 23, 42, 0.65);
-  border: 1px solid rgba(56, 189, 248, 0.25);
-  border-radius: 16px;
+.card {
   padding: 1.5rem;
+  border-radius: 24px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  box-shadow: 0 25px 40px rgba(2, 6, 23, 0.45);
   display: grid;
   gap: 0.75rem;
 }
 
-.assessmentBlock h4 {
+.card h3 {
   margin: 0;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #bae6fd;
+  font-size: 1.2rem;
 }
 
-.assessmentBlock p {
+.card p {
   margin: 0;
-  line-height: 1.7;
-  color: rgba(226, 232, 240, 0.9);
-}
-
-.exampleCard {
-  border-radius: 12px;
-  padding: 0.75rem 1rem;
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  color: rgba(191, 219, 254, 0.95);
+  color: rgba(226, 232, 240, 0.75);
   line-height: 1.6;
 }
 
-.exampleCard strong {
-  color: #7dd3fc;
-  margin-right: 0.5rem;
-}
-
-.settlementSection {
-  display: grid;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-  padding: 1.75rem;
-  border-radius: 20px;
+.ecosystemLink {
+  width: fit-content;
+  margin-top: -0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(59, 130, 246, 0.4);
   background: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-}
-
-.settlementOverview {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.settlementCard {
-  display: grid;
-  gap: 0.5rem;
-  padding: 1rem 1.25rem;
-  border-radius: 16px;
-  background: rgba(37, 99, 235, 0.15);
-  border: 1px solid rgba(59, 130, 246, 0.35);
-  color: rgba(191, 219, 254, 0.95);
-}
-
-.settlementCard strong {
-  font-size: 1rem;
   color: #bfdbfe;
-}
-
-.settlementCard span {
-  line-height: 1.6;
-}
-
-.exampleGroup {
-  display: grid;
-  gap: 1rem;
-}
-
-.channelTableWrapper {
-  overflow-x: auto;
-  overflow-y: hidden;
-  border-radius: 14px;
-  border: 1px solid rgba(59, 130, 246, 0.25);
-  background: rgba(30, 41, 59, 0.6);
-}
-
-.channelTable {
-  width: max(100%, 720px);
-  border-collapse: collapse;
-  table-layout: auto;
   font-size: 0.9rem;
-  color: rgba(226, 232, 240, 0.92);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
-.channelTable th,
-.channelTable td {
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
-  text-align: left;
-  white-space: nowrap;
-}
-
-.channelTable th {
-  background: rgba(37, 99, 235, 0.25);
-  color: rgba(191, 219, 254, 0.95);
+.actionBtn {
+  margin-top: 0.75rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #06b6d4, #2563eb);
+  color: #f8fafc;
   font-weight: 600;
-  font-size: 0.85rem;
+  cursor: pointer;
+  width: fit-content;
 }
 
-.channelTable td:nth-child(1) {
-  white-space: normal;
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  color: #f8fafc;
+  text-decoration: none;
+  width: fit-content;
 }
 
-.channelTable tbody tr:last-child td {
-  border-bottom: none;
+.joinCard {
+  padding: 2rem;
+  border-radius: 28px;
+  background: rgba(15, 118, 110, 0.25);
+  border: 1px solid rgba(45, 212, 191, 0.4);
+  display: grid;
+  gap: 1rem;
 }
 
-.checklist {
+.joinCard h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.inputRow {
   display: grid;
   gap: 0.75rem;
 }
 
-.checklist h4 {
-  margin: 0;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #bfdbfe;
+.inputRow label {
+  font-size: 0.9rem;
+  color: rgba(226, 232, 240, 0.85);
 }
 
-.checklist ol {
-  margin: 0;
-  padding-left: 1.25rem;
-  display: grid;
-  gap: 0.5rem;
-  color: rgba(191, 219, 254, 0.92);
-  line-height: 1.6;
+.inputRow input {
+  padding: 0.8rem 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(45, 212, 191, 0.5);
+  background: rgba(2, 6, 23, 0.65);
+  color: #f8fafc;
+  font-size: 1rem;
 }
 
-.tableWrapper {
-  border-radius: 20px;
-  border: 1px solid rgba(148, 163, 184, 0.25);
-  background: rgba(15, 23, 42, 0.7);
-  box-shadow: 0 24px 48px rgba(2, 6, 23, 0.35);
-  overflow: hidden;
-  width: 100%;
-  align-self: center;
-}
-
-.tierTable {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-.tierTable th,
-.tierTable td {
-  padding: 0.85rem 1rem;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-  text-align: left;
-  font-size: 0.95rem;
-  white-space: normal;
-  vertical-align: middle;
-}
-
-.tierTable thead th {
+.hint {
   font-size: 0.85rem;
+  color: rgba(226, 232, 240, 0.7);
+}
+
+.warning {
+  color: #f97316;
   font-weight: 600;
-  color: rgba(148, 163, 184, 0.92);
-  background: rgba(15, 23, 42, 0.9);
-  white-space: normal;
-  word-break: break-word;
 }
 
-.tierTable th:first-child,
-.tierTable td:first-child {
-  width: 14%;
+.joinBtn {
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #f97316, #fb7185);
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
 }
 
-.tierTable th:nth-child(2),
-.tierTable td:nth-child(2) {
-  width: 14%;
-}
-
-.tierTable th:nth-child(3),
-.tierTable td:nth-child(3),
-.tierTable th:nth-child(4),
-.tierTable td:nth-child(4) {
-  width: 8%;
-}
-
-.tierTable th:nth-child(n + 5),
-.tierTable td:nth-child(n + 5) {
-  width: calc(56% / 11);
+.divider {
+  width: 100%;
   text-align: center;
+  color: rgba(226, 232, 240, 0.5);
+  position: relative;
+  margin: 0.5rem 0;
 }
 
-.tierName {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: rgba(226, 232, 240, 0.2);
 }
 
-.tierName span {
-  font-weight: 600;
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.subCopy {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.8);
+  font-size: 0.95rem;
+}
+
+.steps {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.step {
+  padding: 1.25rem;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.step strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #7dd3fc;
+}
+
+.centerCard {
+  padding: 1.8rem;
+  border-radius: 28px;
+  background: rgba(30, 27, 75, 0.5);
+  border: 1px solid rgba(129, 140, 248, 0.35);
+  display: grid;
+  gap: 1rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(129, 140, 248, 0.6);
+  color: #c7d2fe;
+  width: fit-content;
+}
+
+.floatingSwitch {
+  position: fixed;
+  right: 1.5rem;
+  top: 1.5rem;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(2, 6, 23, 0.85);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+  display: grid;
+  gap: 0.35rem;
+  min-width: 220px;
+}
+
+.floatingSwitch label {
+  font-size: 0.85rem;
+  color: rgba(226, 232, 240, 0.75);
+}
+
+.floatingSwitch select {
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.9);
   color: #f8fafc;
 }
 
-.tierNote {
-  font-size: 0.8rem;
-  color: rgba(148, 163, 184, 0.9);
-}
-
-.badgeYes,
-.badgeNo {
-  display: inline-flex;
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.75);
+  display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 36px;
-  padding: 0.25rem 0.5rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  z-index: 40;
+  padding: 1.5rem;
 }
 
-.badgeYes {
-  background: rgba(34, 197, 94, 0.16);
-  color: #4ade80;
-  border: 1px solid rgba(34, 197, 94, 0.4);
+.modal {
+  width: min(500px, 100%);
+  padding: 1.75rem;
+  border-radius: 26px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+  display: grid;
+  gap: 1rem;
 }
 
-.badgeNo {
-  background: rgba(148, 163, 184, 0.1);
-  color: rgba(148, 163, 184, 0.6);
-  border: 1px solid rgba(148, 163, 184, 0.2);
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.footnote {
+.modalHeader h3 {
   margin: 0;
-  font-size: 0.85rem;
-  color: rgba(148, 163, 184, 0.85);
-  max-width: 1280px;
-  align-self: center;
-  width: 100%;
 }
 
-@media (max-width: 768px) {
-  .wrapper {
-    padding: 2rem 1.25rem 3rem;
-    gap: 2.5rem;
-  }
+.closeBtn {
+  border: none;
+  background: transparent;
+  color: #f8fafc;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
 
-  .sourceTableWrapper {
-    margin: 0 -1.5rem;
-    border-left: none;
-    border-right: none;
-    border-radius: 0;
-  }
+.modalIntro {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.8);
+}
 
-  .settlementSection {
+.inputField {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(59, 130, 246, 0.45);
+  background: rgba(2, 6, 23, 0.6);
+  color: #f8fafc;
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .joinCard {
     padding: 1.5rem;
-    margin: 0 -1.5rem;
-    border-left: none;
-    border-right: none;
-    border-radius: 0;
   }
 
-  .channelTableWrapper {
-    margin: 0 -1.5rem;
-    border-left: none;
-    border-right: none;
-    border-radius: 0;
+  .centerCard {
+    padding: 1.5rem;
   }
 
-  .tableWrapper {
-    margin: 0 -1.5rem;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-    overflow-x: auto;
-    overflow-y: visible;
-  }
-
-  .hero h1 {
-    font-size: clamp(2rem, 8vw, 2.5rem);
-  }
-
-  .valueList li {
-    font-size: 0.95rem;
-  }
-
-  .tierTable {
-    width: 960px;
+  .floatingSwitch {
+    position: static;
+    box-shadow: none;
+    margin-top: -1rem;
   }
 }

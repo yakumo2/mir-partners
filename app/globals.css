@@ -29,3 +29,37 @@ a {
 button {
   font: inherit;
 }
+
+.breadcrumbBar {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  padding: 0.75rem 2rem;
+  background: rgba(2, 6, 23, 0.85);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.breadcrumbBar nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumbItem a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.breadcrumbSeparator {
+  color: rgba(226, 232, 240, 0.5);
+  margin: 0 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .breadcrumbBar {
+    padding: 0.6rem 1rem;
+  }
+}
