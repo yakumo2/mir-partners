@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import PasswordGate from "./components/PasswordGate";
 import Breadcrumbs from "./components/Breadcrumbs";
@@ -48,6 +49,7 @@ export default function RootLayout({
           <Breadcrumbs />
           {children}
         </PasswordGate>
+        <Analytics />
       </body>
     </html>
   );
